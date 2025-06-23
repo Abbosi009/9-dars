@@ -146,9 +146,151 @@ header .desc, .tagline {
 .perk {
   max-width: 200px;
 }
+/* NEW AREAS: Wallet, Storage, Map, Remote, Download */
 
+.wallet-area,
+.storage-area,
+.map-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 80px 40px;
+}
 
+.wallet-text,
+.storage-text,
+.map-text {
+  flex: 1 1 400px;
+}
 
+.wallet-image,
+.storage-image,
+.map-image {
+  flex: 1 1 400px;
+}
+
+.wallet-image img,
+.storage-image img,
+.map-image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: #2d9cdb;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btn-white {
+  background: #fff;
+  color: #2d9cdb;
+}
+
+.remote-area {
+  background: #2d9cdb;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.remote-area p {
+  color: #e0e0e0;
+}
+
+.download-area {
+  background: #f7f7f7;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.store-badges img {
+  width: 150px;
+  margin: 10px;
+}
+
+.site-footer {
+  background: #fff;
+  padding: 80px 40px;
+}
+
+.footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.footer-brand {
+  flex: 1 1 250px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  flex: 2 1 600px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #888;
+  text-decoration: none;
+}
+
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive for new areas */
+@media (max-width: 900px) {
+  .wallet-area,
+  .storage-area,
+  .map-area {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-top {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    flex-direction: column;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+}
 /* Responsive */
 @media (max-width: 768px) {
   nav {
