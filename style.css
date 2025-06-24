@@ -43,11 +43,32 @@ nav ul li a {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, #2d9cdb, #56ccf2);
+  position: relative;
+  overflow: hidden; /* Ortiqcha chiqmasin */
   color: #fff;
   padding: 60px 20px;
   text-align: left;
+  background: none; /* eski gradientni o‘chirildi */
 }
+
+header::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+
+  background: #2d9cdb; /* Ko‘k rang */
+  
+  z-index: 0;
+}
+
+header > div {
+  position: relative;
+  z-index: 1; /* Matn ustida ko‘rinsin */
+}
+
 
 header h1 {
   font-size: 42px;
